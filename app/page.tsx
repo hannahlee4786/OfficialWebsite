@@ -48,7 +48,7 @@ export default function Home() {
   useEffect(() => {
     const id = setInterval(() => {
       setIndex((i) => (i + 1) % words.length);
-    }, 2500);
+    }, 2800);
 
     return () => clearInterval(id);
   }, []);
@@ -64,7 +64,7 @@ export default function Home() {
         <motion.div className="brandBox" variants={slideIn(0, -90)} />
         <motion.div className="nameBox" variants={slideIn(0, 90)}>
           <div className="name">
-            <Typewriter speed="slow" backspace="all">
+            <Typewriter speed="slow">
               {words[index]}
             </Typewriter>
           </div>
