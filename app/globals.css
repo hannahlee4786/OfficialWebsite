@@ -112,12 +112,13 @@ a {
   font-weight: 300;
   letter-spacing: 1px;
   cursor: pointer;
-  transition: 0.3s;
   width: 200px;
+  display: inline-block;
+  transition: none;
 }
 
 .menu a:hover {
-  padding-left: 30px;
+  padding-left: 0;
 }
 
 .copyright {
