@@ -27,7 +27,7 @@ a {
 
 /* LEFT RAIL */
 .leftRail {
-  border-right: 1px solid #9a9a9a;
+  border-right: 1px solid #575757;
   display: grid;
   grid-template-rows: 225px 1fr;
   height: 100%;
@@ -35,15 +35,31 @@ a {
 
 .brandBox {
   position: relative;
-  border-bottom: 1px solid #9a9a9a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border-bottom: 1px solid #575757;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  justify-content: stretch;
+  background-color: aliceblue;
+}
+
+.brandBoxHalf {
+  height: 100%;
+}
+
+.leftHalf {
+  border-right: 1px solid #575757;
+  background: aliceblue;
+}
+
+.rightHalf {
+  background: rgb(0, 0, 0);
 }
 
 .nameBox {
   position: relative;
   overflow: hidden;
+  background-color: white;
 }
 
 .name {
@@ -65,7 +81,7 @@ a {
 
 /* MIDDLE RAIL */
 .middleRail {
-  border-right: 1px solid #9a9a9a;
+  border-right: 1px solid #575757;
   display: grid;
   grid-template-rows: 225px repeat(3, 1fr);
   height: 100%;
@@ -73,15 +89,27 @@ a {
 
 .middleTop {
   position: relative;
-  border-bottom: 1px solid #9a9a9a;
+  border-bottom: 1px solid #575757;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: rgb(240, 240, 252);
+}
+
+#first {
+  background-color: rgb(244, 244, 244);
+}
+
+#fourth {
+  background-color: rgb(0, 0, 0);
+  /* background-color: rgb(251, 239, 250); */
+  /* background-color: rgb(239, 251, 244); */
 }
 
 .middleSection {
-  border-bottom: 1px solid #9a9a9a;
+  border-bottom: 1px solid #575757;
+  background-color: #fbfded;
 }
 
 .star {
@@ -105,14 +133,14 @@ a {
   justify-content: center;
   gap: 12px;
   padding-left: 50px;
+  width: 230px;
 }
 
 .menu a {
-  font-size: 3.3rem;
+  font-size: 2rem;
   font-weight: 300;
   letter-spacing: 1px;
   cursor: pointer;
-  width: 200px;
   display: inline-block;
   transition: none;
 }
@@ -122,10 +150,11 @@ a {
 }
 
 .copyright {
-  border-top: 1px solid #9a9a9a;
+  border-top: 1px solid #575757;
   display: flex;
   align-items: center;
   padding-left: 42px;
+  background-color: azure;
 }
 
 .copyright p {

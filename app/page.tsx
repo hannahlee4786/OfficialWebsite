@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { Typewriter } from "motion-plus/react";
 import { motion, type Variants } from "framer-motion";
+import Link from "next/link";
 
 const words = ["Hannah Lee", "Software Engineer", "USC Student"];
 
@@ -61,7 +62,10 @@ export default function Home() {
       animate="show"
     >
       <motion.aside className="leftRail" variants={slideIn(-140, 0)}>
-        <motion.div className="brandBox" variants={slideIn(0, -90)} />
+        <motion.div className="brandBox" variants={slideIn(0, -90)}>
+          <div className="brandBoxHalf leftHalf" />
+          <div className="brandBoxHalf rightHalf" />
+        </motion.div>
         <motion.div className="nameBox" variants={slideIn(0, 90)}>
           <div className="name">
             <Typewriter speed="slow">
@@ -72,7 +76,7 @@ export default function Home() {
       </motion.aside>
 
       <motion.section className="middleRail" variants={slideIn(0, -140)}>
-        <motion.div className="middleTop" variants={slideIn(0, -80)}>
+        <motion.div id="first" className="middleTop" variants={slideIn(0, -80)}>
           <motion.span
             className="star"
             whileHover={{ scale: 1.6 }}
@@ -84,21 +88,25 @@ export default function Home() {
 
         <motion.div className="middleTop" variants={slideIn(0, 80)} />
         <motion.div className="middleSection" variants={slideIn(0, 100)} />
-        <motion.div className="middleSection" variants={slideIn(0, 120)} />
+        <motion.div id="fourth" className="middleSection" variants={slideIn(0, 120)} />
         <motion.div className="middleSection" variants={slideIn(0, 140)} />
       </motion.section>
 
       <motion.section className="content" variants={slideIn(140, 0)}>
         <motion.nav className="menu" variants={staggerChildren}>
-          {["ABOUT", "EXPERIENCE", "PROJECTS", "CONTACT"].map((item) => (
-            <motion.a
+          {["ABOUT ME", "EXPERIENCE", "PROJECTS", "CONTACT"].map((item) => (
+            <motion.div
               key={item}
               variants={slideIn(90, 0)}
               whileHover={{ x: 18 }}
               transition={{ type: "spring", stiffness: 300, damping: 24 }}
             >
-              {item}
-            </motion.a>
+              {item === "ABOUT ME" ? (
+                <Link href="/about">{item}</Link>
+              ) : (
+                <a>{item}</a>
+              )}
+            </motion.div>
           ))}
         </motion.nav>
 
