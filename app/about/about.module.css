@@ -1,0 +1,131 @@
+.page {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  overflow: hidden;
+}
+
+.leftRail {
+  border-right: 1px solid #999;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  height: 150px;
+  border-bottom: 1px solid #999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2rem;
+}
+
+.logo a {
+  text-decoration: none;
+  color: black;
+}
+
+.corner {
+  position: relative;
+  flex: 1;
+  overflow: visible;
+}
+
+.aboutMe {
+  position: absolute;
+
+  left: 20px;
+  top: 520px;
+
+  transform: translateY(-50%) rotate(-90deg);
+  transform-origin: left top;
+
+  width: 500px;
+
+  font-family: "Times New Roman", serif;
+  font-style: italic;
+  font-size: clamp(4rem, 5vw, 5.5rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+
+  white-space: nowrap;
+
+}
+
+
+.content {
+  display: grid;
+  grid-template-rows: 80px 1fr;
+  min-width: 0;
+  min-height: 0;
+}
+
+.topBar {
+  border-bottom: 1px solid #999;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding-right: 40px;
+}
+
+.topBar p {
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(4, minmax(0, 1fr));
+
+  width: 100%;
+  height: 100%;
+
+  min-width: 0;
+  min-height: 0;
+}
+
+.object,
+.emptyCell,
+.textCell {
+  border-right: 1px solid #999;
+  border-bottom: 1px solid #999;
+  min-width: 0;
+  min-height: 0;
+}
+
+.object,
+.emptyCell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.object {
+  font-size: 1.5rem;
+  transition: transform 0.3s;
+}
+
+.textCell {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.textCell h2 {
+  font-size: 2.4rem;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.textCell p {
+  line-height: 1.6;
+  color: #555;
+}
