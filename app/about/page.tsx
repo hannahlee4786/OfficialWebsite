@@ -35,25 +35,6 @@ const slideIn = (x = 0, y = 0): Variants => ({
   },
 });
 
-const cells = [
-  "Blue House",
-  "Heart",
-  "Popcorn",
-  "Chopsticks",
-  "Frame",
-  "Stone",
-  null,
-  null,
-  null,
-  "ABOUT ME",
-  null,
-  null,
-  null,
-  null,
-  null,
-  null,
-];
-
 export default function AboutPage() {
   const [index, setIndex] = useState(0);
 
@@ -88,31 +69,30 @@ export default function AboutPage() {
 
       <motion.section className={styles.content} variants={slideIn(120, 0)}>
         <div className={styles.topBar}></div>
-
         <div className={styles.grid}>
-          {cells.map((cell, index) => {
-            if (cell === "ABOUT ME") {
-              return (
-                <div key={index} className={styles.textCell}>
-                  <h2>ABOUT ME</h2>
-                  <p>
-                    Chess isn&apos;t my only passion. Here are some of the things I
-                    enjoy outside of coding.
-                  </p>
-                </div>
-              );
-            }
+          <div className={styles.cell}></div>
+          <div className={styles.cell}></div>
+          <div className={styles.cell}></div>
+          <div className={styles.cell}></div>
+          <div className={styles.cell}></div>
 
-            if (cell) {
-              return (
-                <motion.div key={index} className={styles.object}>
-                  ★ {cell}
-                </motion.div>
-              );
-            }
+          <div className={styles.cell}></div>
+          <div className={styles.cell}></div>
+          <div className={styles.cell}></div>
+          <div className={styles.cell}></div>
+          <div className={styles.cell}></div>
 
-            return <div key={index} className={styles.emptyCell} />;
-          })}
+          <div className={styles.cell}></div>
+          <div className={styles.cell}></div>
+          <div className={styles.cell}></div>
+          <div className={styles.cell}></div>
+          <div className={styles.cell}></div>
+
+          <div className={styles.cell}></div>
+          <div className={styles.cell}></div>
+          <div className={styles.cell}></div>
+          <div className={styles.cell}></div>
+          <div className={styles.cell}></div>
         </div>
       </motion.section>
     </motion.main>
